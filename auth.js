@@ -1,4 +1,4 @@
-import users from './authFakeData'
+import users from './project/src/components/auth/authFakeData'
 //check the user is find in our array or no
  var checkUser=function(user, pass) {
     var result = false;

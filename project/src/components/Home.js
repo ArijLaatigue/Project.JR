@@ -12,6 +12,9 @@ class Home extends react.Component {
   render() { return (
 
     <div>
+      <div>
+      <Greeting isLoggedIn={false} />,
+      </div>
       <div className="searchbar">
 <BarSearch/>
       </div>

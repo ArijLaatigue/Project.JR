@@ -99,3 +99,4 @@ var users =
         password: "Giorgeschi",
         email: "cgiorgeschij@netlog.com"
     }]
+    export default users;
