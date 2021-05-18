@@ -1,4 +1,5 @@
 import React from 'react';
+
 // render one single product
 function SingleProduct(props) {
     return (

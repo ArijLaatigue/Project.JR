@@ -23,9 +23,10 @@ var BarSearch = () => {
           }
         })
         .map((element, index) => {
+          var link =  "#"+element.name.replace(/\s+/g, '-').toLowerCase()
           return (
             <div className="search-product">
-              <p >{element.name}</p>
+              <a href={link}>{element.name}</a>
             </div>
           );
         })}

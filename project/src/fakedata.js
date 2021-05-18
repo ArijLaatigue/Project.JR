@@ -1,5 +1,5 @@
 var products=[
-    {
+    { 
         image: "https://cnet1.cbsistatic.com/img/XGoLGWy-Ih3pSfXEd1rBJVFbwAQ=/0x0:2667x4000/770x433/2020/08/04/4964745c-5c94-4823-ab62-f40c0c7e38a9/025-hp-envy-17.jpg",
         name: "HP Laptop",
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
