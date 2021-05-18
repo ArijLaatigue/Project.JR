@@ -42,4 +42,8 @@ html { scroll-behavior: smooth; }
 
 
 
+ .searchbar{
+  border-style: solid;
+  border-color: rgb(162, 0, 255);
+}
 

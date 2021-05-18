@@ -1,6 +1,8 @@
 import react from "react";
 import products from "../fakedata.js";
 import RatingIcon from "./starsrating.js"
+import ReactStars from "react-rating-stars-component";
+
 class ProductDetails extends react.Component{
     constructor(props){
         super(props)
@@ -27,6 +29,10 @@ class ProductDetails extends react.Component{
             rating:index
         })
        }
+
+        ratingChanged  (newRating) {
+        console.log(newRating);
+      };
     render(){
         return(
       <div     className="ProductDetails">
@@ -39,9 +45,9 @@ class ProductDetails extends react.Component{
         
     <div id={link} className="products"  >
      
-        <img class="w-full" src={element.image} alt={element.category} onClick={()=>{this.props.handleView()}}/>
-        <div class="px-6 py-4">
-        <h1 class="font-bold text-xl mb-2" className="name">{element.name}</h1>
+        <img className="w-full" src={element.image} alt={element.category} onClick={()=>{this.props.handleView('product')}}/>
+        <div className="px-6 py-4">
+        <h1 className="font-bold text-xl mb-2" className="name">{element.name}</h1>
         <h4 className="details">
             price:{element.price} 
             stock:{element.stock} 
@@ -49,20 +55,13 @@ class ProductDetails extends react.Component{
             Brand:{element.brand}
         </h4>
         </div>
-        <div className="box flex">
-      {[1, 2, 3, 4, 5].map((index,key) => {
-        return (
-          <RatingIcon 
-          key={key}
-            index={index} 
-            rating={this.rating} 
-            hoverRating={this.hoverRating} 
-            onMouseEnter={this.onMouseEnter.bind(this)} 
-            onMouseLeave={this.onMouseLeave.bind(this)} 
-            onSaveRating={this.onSaveRating.bind(this)} />
-        )
-      })}
-    </div>
+        <ReactStars
+    count={5}
+    onChange={this.ratingChanged}
+    size={24}
+    activeColor="#ffd700"
+  />,
+    
        <button class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"  onClick={()=>{this.props.handleView('product')}}>Buy</button>
        
         </div>

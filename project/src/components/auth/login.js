@@ -22,6 +22,7 @@ export default class Login extends Component {
   }
 
   handleSubmit(event) {
+    console.log(event)
     const { email, password } = this.state;
 
     axios
